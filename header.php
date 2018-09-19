@@ -16,43 +16,74 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+  <title><?php echo bloginfo(); ?> | Purdue Extension</title>
+  <link rel="stylesheet" href="_compiled/styles.css">
+  <meta name="description" content="See how Purdue Extension connects Indiana to Purdue University research and programs in agriculture, communities, families, health, and youth development." />
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="<?php echo bloginfo(); ?>" />
+  <meta property="og:url" content="<?php echo site_url(); ?>" />
+  <meta property="og:image" content="https://extension.purdue.edu/annualreport/images/cover.jpg" />
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'extension2018' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$extension2018_description = get_bloginfo( 'description', 'display' );
-			if ( $extension2018_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $extension2018_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'extension2018' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
+	<div class="container">
+    <header class="header">
+      <!-- TODO: svg of logo -->
+      <a href="/"><img src="assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
+      <form action="results/" method="get" class="form__search form__search--header">
+        <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more" />
+        <input type="image" value="Search" src="assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+      </form>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <p class="navbar-toggler__menu">Menu</p>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+  </div>
+  <div class="wide-container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    	<?php
+			/*
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+			*/
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/about">About</a>
+            <a class="nav-item nav-link" href="/category/1">Agriculture</a>
+            <a class="nav-item nav-link" href="/category/2">Community</a>
+            <a class="nav-item nav-link" href="/category/3">Environment</a>
+            <a class="nav-item nav-link" href="/category/4">Family</a>
+            <a class="nav-item nav-link" href="/category/5">Food</a>
+            <a class="nav-item nav-link" href="/category/6">Garden</a>
+            <a class="nav-item nav-link" href="/category/7">Youth</a>
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li> -->
+            <form action="/results/" method="get" class="form__search form__search--mobile-nav">
+              <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more" />
+              <input type="image" value="Search" src="assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 
 	<div id="content" class="site-content">

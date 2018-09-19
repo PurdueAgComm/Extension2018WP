@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opioid Response - Purdue Extension</title>
+  <link rel="stylesheet" href="_compiled/styles.css">
+  <meta name="description" content="See how Purdue Extension connects Indiana to Purdue University research and programs in agriculture, communities, families, health, and youth development." />
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" value="summary">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Purdue Extension" />
+  <meta property="og:url" content="https://dev.www.purdue.edu" />
+  <meta property="og:image" content="https://extension.purdue.edu/annualreport/images/cover.jpg" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <!-- TODO: svg of logo -->
+      <a href="/"><img src="assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
+      <form action="results/" method="get" class="form__search form__search--header">
+        <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more" />
+        <input type="image" value="Search" src="assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+      </form>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <p class="navbar-toggler__menu">Menu</p>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </header>
+  </div>
+  <div class="wide-container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home</a>
+            <a class="nav-item nav-link" href="/about">About</a>
+            <a class="nav-item nav-link" href="/category/1">Agriculture</a>
+            <a class="nav-item nav-link" href="/category/2">Community</a>
+            <a class="nav-item nav-link" href="/category/3">Environment</a>
+            <a class="nav-item nav-link" href="/category/4">Family</a>
+            <a class="nav-item nav-link" href="/category/5">Food</a>
+            <a class="nav-item nav-link" href="/category/6">Garden</a>
+            <a class="nav-item nav-link" href="/category/7">Youth</a>
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li> -->
+            <form action="/results/" method="get" class="form__search form__search--mobile-nav">
+              <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more" />
+              <input type="image" value="Search" src="assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="wide-container">
+    <div class="hero">
+      <picture class="hero__banner">
+        <source srcset="assets/images/purpleag.png" media="(min-width: 992px)">
+        <source srcset="assets/images/purpleag--tablet.png" media="(min-width: 576px)">
+        <img srcset="assets/images/purpleag--mobile.png" alt="A test image">
+      </picture>
+      <!-- <div class="hero__search">
+        <script>
+          /*
+                  (function() {
+                    var cx = '008827541188184757261:ae-edc-nryi';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                  })();
+                  */
+        </script>
+        <!-- <gcse:searchbox-only resultsUrl="/results/" class="form__search form__search--hero"></gcse:searchbox-only> -->
+        <!--<h2 class="hero__search-title">What are you looking for?</h2>
+        <form action="results/" method="get" class="form__search form__search--hero">
+          <input type="search" name="q" class="form__search-input form__search-input--hero" placeholder="Search" aria-label="Search" />
+          <input type="image" value="Search" src="assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+        </form>
+      </div> -->
+    </div>
+  </div>
+  <div class="container">
+    <div class="story-callouts">
+      <h2 class="story-callouts__title">Recent Stories</h2>
+      <div class="row no-gutters">
+        <a href="article/4893" class="col-md-3 story-callouts__callout">
+          <p class="story-callouts__callout-date">
+            June 15, 2018 | <span style='color:rgba(51,153,102)'>4-H</span> </p>
+          <h3 class="story-callouts__callout-title">Indiana Livestock Shows, Conferences, and Workshops</h3>
+        </a>
+        <a href="article/29212" class="col-md-3 story-callouts__callout">
+          <p class="story-callouts__callout-date">
+            June 14, 2018 </p>
+          <h3 class="story-callouts__callout-title">Purdue Food Science department offers four-day food safety workshop for industry professionals</h3>
+        </a>
+        <a href="article/29194" class="col-md-3 story-callouts__callout">
+          <p class="story-callouts__callout-date">
+            June 12, 2018 </p>
+          <h3 class="story-callouts__callout-title">Learn seedless cucumber production during SWPAC high tunnel tour</h3>
+        </a>
+        <a href="article/29192" class="col-md-3 story-callouts__callout">
+          <p class="story-callouts__callout-date">
+            June 12, 2018 </p>
+          <h3 class="story-callouts__callout-title">Extension food safety specialist: Consumers can be confident about Indiana melon crop</h3>
+        </a>
+        <a href="articles/" class="cta cta__primary">View All Stories</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wide-container" style="margin-top: 3rem;">
+    <div class="give edge edge--top--reverse">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="give__headline">Help move Purdue Extension forward</h2>
+            <p>Every dollar you donate supports our efforts to build vibrant communities, strong families, and profitable businesses on its Main Streets and at its farm gates – regularly reaching more than 620,000 people. Our team – including campus specialists
+              and Extension Educators in all 92 counties – connects Indiana communities to world-class Purdue University research and a nationwide network of experts on agriculture, community, environment, family, food, and youth.</p>
+            <div class="give__cta">
+              <a href="https://secure.ud.purdue.edu/s/1461/campaign/give.aspx?sid=1461&gid=1010&pgid=3175&cid=7440&bledit=1&sort=1&dids=5355.35&appealcode=15394" class="cta cta__secondary cta__secondary--black">
+              Give Now <i class="fas fa-arrow-alt-circle-right"></i>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wide-container">
+    <div class="color-blocks">
+      <div class="color-blocks__color-block color-blocks--teal edge reveal">
+        <div class="row justify-content-start no-gutters">
+          <div class="col-lg-6">
+            <picture class="hero__banner">
+              <source srcset="assets/images/hhs.png" media="(min-width: 1200px)">
+              <source srcset="assets/images/hhs--small.png" media="(min-width: 992px)">
+              <source srcset="assets/images/hhs.png" media="(min-width: 576px)">
+              <img srcset="assets/images/hhs.png" alt="Photo of shoes running down path">
+            </picture>
+          </div>
+          <div class="col-lg-6 color-blocks__content justify-content-center">
+            <h3 class="color-blocks__title">A message to move</h3>
+            <p class="color-blocks__text">Sometimes the hardest part of getting fit is taking that first step. Purdue Extension motivates adults to Get WalkIN’ through email coaching. And it’s working!</p>
+            <a href="https://extension.purdue.edu/annualreport/walking/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="color-blocks__color-block color-blocks--brown reveal">
+        <div class="row justify-content-start no-gutters">
+          <div class="col-lg-6">
+            <picture class="hero__banner">
+              <source srcset="assets/images/community.png" media="(min-width: 1200px)">
+              <source srcset="assets/images/community--small.png" media="(min-width: 992px)">
+              <source srcset="assets/images/community.png" media="(min-width: 576px)">
+              <img srcset="assets/images/community.png" alt="Two men talking outside a local pharmacy">
+            </picture>
+          </div>
+          <div class="col-lg-6 color-blocks__content justify-content-center">
+            <h3 class="color-blocks__title">Revitalizing small towns</h3>
+            <p class="color-blocks__text">Purdue Extension partners with the Hometown Collaboration Initiative, helping small towns capitalize on their potential to flourish.</p>
+            <a href="https://extension.purdue.edu/annualreport/hci/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="color-blocks__color-block color-blocks--yellow reveal">
+        <div class="row justify-content-start no-gutters">
+          <div class="col-lg-6">
+            <picture class="hero__banner">
+              <source srcset="assets/images/anr.png" media="(min-width: 1200px)">
+              <source srcset="assets/images/anr--small.png" media="(min-width: 992px)">
+              <source srcset="assets/images/anr.png" media="(min-width: 576px)">
+              <img srcset="assets/images/anr.png" alt="Drone flying over field">
+            </picture>
+          </div>
+          <div class="col-lg-6 color-blocks__content justify-content-center">
+            <h3 class="color-blocks__title">Eyes in the sky</h3>
+            <p class="color-blocks__text">Agriculture’s next wave is digital. That means data-driven diagnoses, forecasts, and assessments. Unmanned aerial vehicles are crucial to that toolkit, and Purdue Extension is setting best practices for farmers across Indiana.</p>
+            <a href="https://extension.purdue.edu/annualreport/uav/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="color-blocks__color-block color-blocks--green edge edge--bottom reveal">
+        <div class="row justify-content-start no-gutters">
+          <div class="col-lg-6">
+            <picture class="hero__banner">
+              <source srcset="assets/images/4h.png" media="(min-width: 1200px)">
+              <source srcset="assets/images/4h--small.png" media="(min-width: 992px)">
+              <source srcset="assets/images/4h.png" media="(min-width: 576px)">
+              <img srcset="assets/images/4h.png" alt="Man standing in front of sunflowers">
+            </picture>
+          </div>
+          <div class="col-lg-6 color-blocks__content justify-content-center">
+            <h3 class="color-blocks__title">Encouraging Indiana’s future entrepreneurs</h3>
+            <p class="color-blocks__text">Indiana 4-H Youth Development has always grown the next generation of leaders. Today, that also means entrepreneurship. Purdue Extension and the Indiana 4-H Entrepreneurship Academy create opportunities for youth to dream big.</p>
+            <a href="https://extension.purdue.edu/annualreport/entrepreneurs/" class="cta cta__secondary cta__secondary--white">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="wide-container">
+    <footer class="footer edge edge--top--reverse">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-sm-8 col-12">
+            <p>&copy; 2018 Purdue University | <a href="http://www.purdue.edu/purdue/disclaimer.html">An equal access, equal opportunity university</a></p>
+            <p>615 West State Street, West Lafayette, IN 47907-2053</p>
+            <p>If you have trouble accessing this page because of a disability, please email us at <a href="mailto:extension@purdue.edu?subject=ADA Request">extension@purdue.edu</a></p>
+          </div>
+          <div class="col-md-2 col-sm-4 col-6 offset-sm-0 offset-3 ">
+            <a href="https://purdue.edu"><img src="https://www.purdue.edu/purdue/images/logo.png" alt="Purdue University"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- SCRIPTS -->
+  <script src="_compiled/vendor.js" async></script>
+  <script src="_compiled/app.js" async></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+</body>
+
+</html>
