@@ -33,7 +33,7 @@
 	<div class="container">
     <header class="header">
       <!-- TODO: svg of logo -->
-      <a href="/"><img src="assets/images/logo.png" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
+      <a href="/"><img src="https://extension.purdue.edu/assets/images/logo.svg" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
       <form action="results/" method="get" class="form__search form__search--header">
         <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more" />
         <input type="image" value="Search" src="assets/images/icon--search.svg" class="form__search-submit" alt="Search">
@@ -87,3 +87,4 @@
   </div>
 
 	<div id="content" class="site-content">
+		<div class="container">

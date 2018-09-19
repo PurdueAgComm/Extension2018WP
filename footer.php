@@ -11,6 +11,7 @@
 
 ?>
 
+</div> <!-- .container -->
 	</div><!-- #content -->
 	<div class="wide-container">
 	  <footer class="footer edge edge--top--reverse">
