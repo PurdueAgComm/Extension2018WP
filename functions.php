@@ -120,11 +120,19 @@ add_action( 'widgets_init', 'extension2018_widgets_init' );
  * Enqueue scripts and styles.
  */
 function extension2018_scripts() {
+	wp_enqueue_style( 'extension-style', "https://extension.purdue.edu/_compiled/styles.css");
+
 	wp_enqueue_style( 'extension2018-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'extension2018-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'extension2018-vendor', get_template_directory_uri() . '/_compiled/vendor.js', array(), '20180919', true );
+
+	wp_enqueue_script( 'extension2018-app', 'https://use.fontawesome.com/releases/v5.0.10/js/all.js', array(), '20180919', true );
+
+	wp_enqueue_script( 'extension2018-fa', get_template_directory_uri() . '/_compiled/app.js', array(), '20180919', true );
+
+	wp_enqueue_script( 'extension2018-reveal', 'https://unpkg.com/scrollreveal/dist/scrollreveal.min.js', array(), '20180919', true );
 
 	wp_enqueue_script( 'extension2018-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -161,3 +169,51 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Load custom bootstrap navwalker for menus
+ */
+//require_once('wp_bootstrap_navwalker.php');
+
+/**
+ * Extend Recent Posts Widget
+ *
+ * Adds different formatting to the default WordPress Recent Posts Widget
+ */
+
+Class Extension_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
+
+	function widget($args, $instance) {
+
+		extract( $args );
+
+		$title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts') : $instance['title'], $instance, $this->id_base);
+
+		if( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) )
+			$number = 10;
+
+		$r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true ) ) );
+		if( $r->have_posts() ) :
+
+			echo $before_widget;
+			if( $title ) echo $before_title . $title . $after_title; ?>
+			<div class="sidenav">
+				<ul>
+					<?php while( $r->have_posts() ) : $r->the_post(); ?>
+					<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?> <!-- <small class"label label-default"><?php the_time( 'F d'); ?></small> --></a></li>
+					<?php endwhile; ?>
+				</ul>
+			</div>
+
+			<?php
+			echo $after_widget;
+
+		wp_reset_postdata();
+
+		endif;
+	}
+}
+function extension2018_recent_widget_registration() {
+  unregister_widget('WP_Widget_Recent_Posts');
+  register_widget('Extension_Recent_Posts_Widget');
+}
+add_action('widgets_init', 'extension2018_recent_widget_registration');

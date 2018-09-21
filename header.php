@@ -17,7 +17,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
   <title><?php echo bloginfo(); ?> | Purdue Extension</title>
-  <link rel="stylesheet" href="_compiled/styles.css">
   <meta name="description" content="See how Purdue Extension connects Indiana to Purdue University research and programs in agriculture, communities, families, health, and youth development." />
   <!-- Twitter Card data -->
   <meta name="twitter:card" value="summary">
@@ -35,8 +34,8 @@
       <!-- TODO: svg of logo -->
       <a href="/"><img src="https://extension.purdue.edu/assets/images/logo.svg" alt="Purdue Extension - Purdue University" class="header__logo" /></a>
       <form action="results/" method="get" class="form__search form__search--header">
-        <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more" />
-        <input type="image" value="Search" src="assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+        <input type="search" name="q" class="form__search-input" placeholder="Search Purdue Extension" aria-label="Search" aria-placeholder="Search people, articles, and more" />
+        <input type="image" value="Search" src="https://extension.purdue.edu/assets/images/icon--search.svg" class="form__search-submit" alt="Search">
       </form>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <p class="navbar-toggler__menu">Menu</p>
@@ -77,8 +76,8 @@
                 </div>
             </li> -->
             <form action="/results/" method="get" class="form__search form__search--mobile-nav">
-              <input type="search" name="q" class="form__search-input" placeholder="Search people, articles, and more" aria-label="Search" aria-placeholder="Search people, articles, and more" />
-              <input type="image" value="Search" src="assets/images/icon--search.svg" class="form__search-submit" alt="Search">
+              <input type="search" name="q" class="form__search-input" placeholder="Search Purdue Extension" aria-label="Search" aria-placeholder="Search people, articles, and more" />
+              <input type="image" value="Search" src="https://extension.purdue.edu/assets/images/icon--search.svg" class="form__search-submit" alt="Search">
             </form>
           </div>
         </div>
@@ -87,4 +86,3 @@
   </div>
 
 	<div id="content" class="site-content">
-		<div class="container">
