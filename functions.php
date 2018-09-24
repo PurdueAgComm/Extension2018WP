@@ -126,11 +126,7 @@ function extension2018_scripts() {
 
 	wp_enqueue_script( 'extension2018-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'extension2018-vendor', get_template_directory_uri() . '/_compiled/vendor.js', array(), '20180919', true );
-
-	wp_enqueue_script( 'extension2018-app', 'https://use.fontawesome.com/releases/v5.0.10/js/all.js', array(), '20180919', true );
-
-	wp_enqueue_script( 'extension2018-fa', get_template_directory_uri() . '/_compiled/app.js', array(), '20180919', true );
+	wp_enqueue_script( 'extension2018-fa', 'https://use.fontawesome.com/releases/v5.0.10/js/all.js', array(), '20180919', true );
 
 	wp_enqueue_script( 'extension2018-reveal', 'https://unpkg.com/scrollreveal/dist/scrollreveal.min.js', array(), '20180919', true );
 
@@ -140,6 +136,7 @@ function extension2018_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'extension2018_scripts' );
 
 /**
@@ -172,7 +169,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Load custom bootstrap navwalker for menus
  */
-//require_once('wp_bootstrap_navwalker.php');
+require_once('wp_bootstrap_navwalker.php');
 
 /**
  * Extend Recent Posts Widget
@@ -212,8 +209,15 @@ Class Extension_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 		endif;
 	}
 }
+
 function extension2018_recent_widget_registration() {
   unregister_widget('WP_Widget_Recent_Posts');
   register_widget('Extension_Recent_Posts_Widget');
 }
 add_action('widgets_init', 'extension2018_recent_widget_registration');
+
+// remove the [...] from the_excerpt output and just adds an elipses
+function new_excerpt_more( $more ) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
