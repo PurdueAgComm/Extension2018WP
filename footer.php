@@ -34,6 +34,9 @@
 
 
   <!-- SCRIPTS -->
+  <script src="https://extension.purdue.edu/_compiled/vendor.js" async></script>
+  <script src="https://extension.purdue.edu/_compiled/app.js" async></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<?php wp_footer(); ?>
 </body>
 </html>

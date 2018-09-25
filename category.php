@@ -17,10 +17,10 @@ get_header();
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-3  hidden-xs d-none d-sm-block">
+    <div class="col-md-3 d-none d-md-block">
       <?php get_sidebar(); ?>
     </div>
-    <div id="primary" class="content-area col-sm-9">
+    <div id="primary" class="content-area col-md-9">
       <main id="main" class="site-main">
       <h1><?php single_cat_title(); ?></h1>
       <?php
