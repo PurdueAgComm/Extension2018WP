@@ -17,8 +17,10 @@ $hasFeaturedImage = get_the_post_thumbnail_url();
 <div class="wide-container">
   <div class="hero">
     <picture class="hero__banner">
-      <source srcset="<?php echo get_the_post_thumbnail_url(); ?>" media="(min-width: 992px)">
-      <img srcset="" alt="<?php the_title();?>">
+      <source srcset="<?php echo get_the_post_thumbnail_url(null, 'full'); ?>" media="(min-width: 1200px)">
+      <source srcset="<?php echo get_the_post_thumbnail_url(null, 'large'); ?>" media="(min-width: 992px)">
+      <source srcset="<?php echo get_the_post_thumbnail_url(null, 'medium'); ?>" media="(min-width: 576px)">
+      <img srcset="<?php echo get_the_post_thumbnail_url(null, 'medium'); ?>" alt="<?php the_title();?>">
     </picture>
   </div>
 </div>
