@@ -224,6 +224,9 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 require_once('wp_bootstrap_navwalker.php');
 
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_pagination.php');
+
 /*  Add responsive container to embeds
 /* ------------------------------------ */
 function alx_embed_html( $html ) {
@@ -232,3 +235,4 @@ function alx_embed_html( $html ) {
 
 add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
+

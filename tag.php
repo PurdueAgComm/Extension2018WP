@@ -32,6 +32,11 @@ get_header();
       endwhile; // End of the loop.
       ?>
 
+      <?php
+        if ( function_exists('wp_bootstrap_pagination') )
+          wp_bootstrap_pagination();
+      ?>
+
       </main><!-- #main -->
     </div><!-- #primary -->
   </div> <!-- .row -->
