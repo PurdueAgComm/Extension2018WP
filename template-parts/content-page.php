@@ -50,8 +50,6 @@ $hasFeaturedImage = get_the_post_thumbnail_url();
 			) );
 			?>
 		</div><!-- .entry-content -->
-
-
 	</article><!-- #post-<?php the_ID(); ?> -->
 </div>
 
