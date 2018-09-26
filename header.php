@@ -45,26 +45,19 @@
   </div>
   <div class="wide-container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    	<?php
-			/*
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			*/
-			?>
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/">Home</a>
-            <a class="nav-item nav-link" href="/about">About</a>
-            <a class="nav-item nav-link" href="/category/1">Agriculture</a>
-            <a class="nav-item nav-link" href="/category/2">Community</a>
-            <a class="nav-item nav-link" href="/category/3">Environment</a>
-            <a class="nav-item nav-link" href="/category/4">Family</a>
-            <a class="nav-item nav-link" href="/category/5">Food</a>
-            <a class="nav-item nav-link" href="/category/6">Garden</a>
-            <a class="nav-item nav-link" href="/category/7">Youth</a>
+            <?php
+              wp_nav_menu( array(
+                'theme_location' => 'menu-1',
+                'menu_id'        => 'primary-menu',
+                'items_wrap' => '%3$s',
+                'menu_class' => 'nav-item nav-link',
+                'depth' => 1,
+              ) );
+            ?>
+
             <!-- <li class="nav-item dropdown">
                 <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Dropdown link

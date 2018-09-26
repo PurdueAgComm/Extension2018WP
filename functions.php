@@ -166,10 +166,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-/**
- * Load custom bootstrap navwalker for menus
- */
-require_once('wp_bootstrap_navwalker.php');
 
 /**
  * Extend Recent Posts Widget
@@ -221,3 +217,9 @@ function new_excerpt_more( $more ) {
     return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+/**
+ * Load custom bootstrap navwalker for menus
+ */
+
+require_once('wp_bootstrap_navwalker.php');
