@@ -113,10 +113,10 @@
 }
 
 .blog-meta {
-    border-left: .5rem solid #ffd100;
-    padding: 10px;
-    background-color: #fafafa;
-    margin-top: 20px;
+    border-left: .25rem solid #ffd100;
+    padding: 1rem;
+    background-color: #fcfcfc;
+    margin-top: 1rem;
 }
 
 /* WP nav styling */
@@ -156,3 +156,8 @@
     color: #333;
     font-weight: bold;
   }
+
+.page-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}

@@ -28,8 +28,6 @@ get_header();
 						</h1>
 					</header><!-- .page-header -->
 
-					<?php get_search_form(); ?>
-
 					<?php
 					/* Start the Loop */
 					while ( have_posts() ) :
@@ -44,7 +42,9 @@ get_header();
 
 					endwhile;
 
-					the_posts_navigation();
+        	wp_bootstrap_pagination();
+
+
 
 				else :
 

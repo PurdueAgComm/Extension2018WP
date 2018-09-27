@@ -22,7 +22,7 @@ get_header();
     </div>
     <div id="primary" class="content-area col-md-9">
       <main id="main" class="site-main">
-      <h1><?php single_cat_title(); ?></h1>
+      <h1 class="page-title"><?php single_cat_title(); ?></h1>
       <?php
       while ( have_posts() ) :
         the_post();

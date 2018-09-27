@@ -17,7 +17,7 @@
 */
 $hasFeaturedImage = get_the_post_thumbnail_url();
 ?>
-<div class="row" style="border-left: .25rem solid gold; margin-bottom: 1rem; padding: 1rem; background-color: #fcfcfc;">
+<div class="row" style="border-right: .25rem solid #FFD100; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); margin-bottom: 3rem; padding: 1rem; background-color: #fcfcfc;">
   <?php if(has_post_thumbnail()) : ?>
   <div class="col-sm-5">
     <a href="<?php echo get_the_permalink(); ?>"><?php the_post_thumbnail('medium'); ?></a>
