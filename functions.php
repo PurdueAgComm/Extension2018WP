@@ -236,3 +236,27 @@ function alx_embed_html( $html ) {
 add_filter( 'embed_oembed_html', 'alx_embed_html', 10, 3 );
 add_filter( 'video_embed_html', 'alx_embed_html' ); // Jetpack
 
+
+/**
+* Create Custom Customize Settings for Extension
+*/
+function extension2018_new_customizer_settings($wp_customize) {
+
+// Add Footer Section
+$wp_customize->add_section('extension2018_settings', array(
+'title' => 'Extension Settings',
+'description' => 'Customize Extension-specific settings.',
+'priority' => 10,
+));
+
+// add a setting for the address
+$wp_customize->add_setting('extension2018_custom_address');
+// Add a control to upload the logo
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'extension2018_custom_address',
+array(
+'label' => 'Custom Address',
+'section' => 'extension2018_settings',
+'settings' => 'extension2018_custom_address',
+) ) );
+}
+add_action('customize_register', 'extension2018_new_customizer_settings');

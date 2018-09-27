@@ -21,7 +21,12 @@
 	      <div class="row">
 	        <div class="col-md-10 col-sm-8 col-12">
 	          <p>&copy; 2018 Purdue University | <a href="http://www.purdue.edu/purdue/disclaimer.html">An equal access, equal opportunity university</a></p>
-	          <p>615 West State Street, West Lafayette, IN 47907-2053</p>
+
+	          <?php if(get_theme_mod( 'extension2018_custom_address' )) :
+	          	echo "<p>" . get_theme_mod( 'extension2018_custom_address' ) . "</p>";
+	          else : ?>
+	          	<p>615 West State Street, West Lafayette, IN 47907-2053</p>
+	         	<?php endif; ?>
 	          <p>If you have trouble accessing this page because of a disability, please email us at <a href="mailto:extension@purdue.edu?subject=ADA Request">extension@purdue.edu</a></p>
 	        </div>
 	        <div class="col-md-2 col-sm-4 col-6 offset-sm-0 offset-3 ">
