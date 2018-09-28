@@ -166,51 +166,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+register_sidebar(array(
+	'id'            => 'sidenav-sidebar',
+	'name'          => 'Left Sidebar Navigation',
+	'description'   => 'Appears only on 2 columnlayouts. You can use a text widget with an unordered list for navigation links. Alternatively, create a new menu and use the Custom Menu widget and visibility function.',
+	'class'         => 'sidenav',
+	'before_title'  => '<h2 class="widgettitle">',
+	'after_title'   => '</h2>',
+	'before_widget' => '<div>',
+	'after_widget'  => '</div><br>',
+   ));
 
-/**
- * Extend Recent Posts Widget
- *
- * Adds different formatting to the default WordPress Recent Posts Widget
- */
-
-Class Extension_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
-
-	function widget($args, $instance) {
-
-		extract( $args );
-
-		$title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts') : $instance['title'], $instance, $this->id_base);
-
-		if( empty( $instance['number'] ) || ! $number = absint( $instance['number'] ) )
-			$number = 10;
-
-		$r = new WP_Query( apply_filters( 'widget_posts_args', array( 'posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'ignore_sticky_posts' => true ) ) );
-		if( $r->have_posts() ) :
-
-			echo $before_widget;
-			if( $title ) echo $before_title . $title . $after_title; ?>
-			<div class="sidenav">
-				<ul>
-					<?php while( $r->have_posts() ) : $r->the_post(); ?>
-					<li><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?> <!-- <small class"label label-default"><?php the_time( 'F d'); ?></small> --></a></li>
-					<?php endwhile; ?>
-				</ul>
-			</div>
-
-			<?php
-			echo $after_widget;
-
-		wp_reset_postdata();
-
-		endif;
-	}
-}
-
-function extension2018_recent_widget_registration() {
-  unregister_widget('WP_Widget_Recent_Posts');
-  register_widget('Extension_Recent_Posts_Widget');
-}
-add_action('widgets_init', 'extension2018_recent_widget_registration');
+register_sidebar(array(
+  'id'            => 'sidecontent',
+  'name'          => 'Left Sidebar Content',
+  'description'   => 'Appears only on 2 column layouts, here you can add custom content that will appear under your navigation.',
+  'before_title'  => '<h5 class="widgettitle">',
+  'after_title'   => '</h5>',
+  'before_widget' => '<div id="%1$s">',
+  'after_widget'  => '</div>',
+));
 
 // remove the [...] from the_excerpt output and just adds an elipses
 function new_excerpt_more( $more ) {
@@ -259,4 +234,6 @@ array(
 'settings' => 'extension2018_custom_address',
 ) ) );
 }
+
+
 add_action('customize_register', 'extension2018_new_customizer_settings');
