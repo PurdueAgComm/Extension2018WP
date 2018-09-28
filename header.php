@@ -23,7 +23,30 @@
   <meta property="og:title" content="<?php echo bloginfo(); ?>" />
   <meta property="og:url" content="<?php echo site_url(); ?>" />
   <meta property="og:image" content="https://extension.purdue.edu/annualreport/images/cover.jpg" />
+  <script type="text/javascript">// <![CDATA[
+    var _gaq = _gaq || [];
 
+      // If you have your own Google Analytics account,
+      // change the account number in the line below to your account
+      // The number here is for the main Purdue analytics account
+      _gaq.push(['_setAccount', 'UA-2785081-1']);
+      // this is for main extension
+      _gaq.push(['_setAccount', 'UA-46266883-1']);
+      // numbers below are for all of Extension county views and programs
+      _gaq.push(['_setAccount', 'UA-46266883-3']);
+      _gaq.push(['_setAccount', 'UA-46266883-4']);
+      _gaq.push(['_setAccount', 'UA-46266883-5']);
+      _gaq.push(['_setAccount', 'UA-46266883-6']);
+      _gaq.push(['_trackPageview']);
+
+      // Load the Google Analytics asynchronous API
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      // ]]>
+  </script>
 	<?php wp_head(); ?>
 </head>
 
