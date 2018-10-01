@@ -18,7 +18,8 @@ get_header();
 <div class="container">
   <div class="row">
     <div class="col-sm-3  hidden-xs d-none d-sm-block">
-      <?php get_sidebar(); ?>
+      <?php get_sidebar('sidenav'); ?>
+      <?php get_sidebar('sidecontent'); ?>
     </div>
     <div id="primary" class="content-area col-sm-9">
       <main id="main" class="site-main">

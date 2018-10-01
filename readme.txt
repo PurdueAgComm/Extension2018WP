@@ -1,6 +1,6 @@
 === extension2018 ===
 
-Contributors: automattic
+Contributors: kenny wilson (purduekenny)
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5
@@ -13,7 +13,7 @@ A starter theme called extension2018.
 
 == Description ==
 
-Description
+Extension 2018 Wordpress Theme was developed by Kenny Wilson using `underscores` as a base. It's a Wordpress version of the new 2018 Purdue Extension design.
 
 == Installation ==
 
@@ -23,9 +23,7 @@ Description
 
 == Frequently Asked Questions ==
 
-= Does this theme support any plugins? =
 
-extension2018 includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

@@ -55,5 +55,6 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+get_sidebar('sidenav');
+get_sidebar('sidecontent');
 get_footer();
