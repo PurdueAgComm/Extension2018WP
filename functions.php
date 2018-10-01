@@ -237,3 +237,4 @@ array(
 
 
 add_action('customize_register', 'extension2018_new_customizer_settings');
+
