@@ -44,7 +44,7 @@ if ( ! function_exists( 'extension2018_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'extension2018' ),
+			'Primary' => esc_html__( 'Primary', 'extension2018' ),
 		) );
 
 		/*
@@ -197,7 +197,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
  * Load custom bootstrap navwalker for menus
  */
 
-require_once('wp_bootstrap_navwalker.php');
+require_once get_template_directory() . '/wp_bootstrap_navwalker.php';
 
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_pagination.php');

@@ -71,12 +71,25 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <?php
+              // wp_nav_menu( array(
+              //   // 'theme_location' => 'menu-1',
+              //   // 'menu_id'        => 'primary-menu',
+              //   // 'items_wrap' => '%3$s',
+              //   // 'menu_class' => 'nav-item nav-link',
+              //   // 'depth' => 1,
+              // ) );
+
               wp_nav_menu( array(
-                'theme_location' => 'menu-1',
-                'menu_id'        => 'primary-menu',
-                'items_wrap' => '%3$s',
-                'menu_class' => 'nav-item nav-link',
-                'depth' => 1,
+                'theme_location'  => 'menu-1',
+                'menu-id'         => 'primary-menu',
+                'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
+                'container'       => 'div',
+                'items_wrap'      => '%3$s',
+                //'container_class' => 'collapse navbar-collapse',
+                //'container_id'    => 'bs-example-navbar-collapse-1',
+                'menu_class'      => 'nav-item navbar-nav mr-auto',
+                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                'walker'          => new WP_Bootstrap_Navwalker(),
               ) );
             ?>
 
