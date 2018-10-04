@@ -71,14 +71,6 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <?php
-              // wp_nav_menu( array(
-              //   // 'theme_location' => 'menu-1',
-              //   // 'menu_id'        => 'primary-menu',
-              //   // 'items_wrap' => '%3$s',
-              //   // 'menu_class' => 'nav-item nav-link',
-              //   // 'depth' => 1,
-              // ) );
-
               wp_nav_menu( array(
                 'theme_location'  => 'menu-1',
                 'menu-id'         => 'primary-menu',
@@ -92,17 +84,6 @@
                 'walker'          => new WP_Bootstrap_Navwalker(),
               ) );
             ?>
-
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li> -->
             <form action="/results/" method="get" class="form__search form__search--mobile-nav">
               <input type="search" name="q" class="form__search-input" placeholder="Search Purdue Extension" aria-label="Search" aria-placeholder="Search people, articles, and more" />
               <input type="image" value="Search" src="https://extension.purdue.edu/assets/images/icon--search.svg" class="form__search-submit" alt="Search">
