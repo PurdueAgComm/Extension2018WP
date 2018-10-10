@@ -16,3 +16,8 @@ Features
 * Users can update the default page template by selecting the Full Width page template when creating or editing a page
 * Users can modify the sidebar of their site that appears throughout the default page layout by using the Wordpress Widgets feature
 
+Suggestions
+-------------
+
+* Work with ITaP to install as one of the available themes so that you don't have to manually install
+* Create plugin(s) that pull articles and events from Extension that is output as shortcode and widget(s) so users can use Depot features within their Wordpress site
