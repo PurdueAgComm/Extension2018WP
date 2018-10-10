@@ -12,7 +12,7 @@ Features
 --------------
 
 * Users are able to specify a main menu by using the Wordpress Menu feature and selecting "Primary Menu"
-* Users are able to modify the address that appears in the footer if they are not located in AGAD
+* Users are able to modify the address that appears in the footer if they are not located in AGAD using the customize tool and selecting the Extension dropdown
 * Users can update the default page template by selecting the Full Width page template when creating or editing a page
 * Users can modify the sidebar of their site that appears throughout the default page layout by using the Wordpress Widgets feature
 
