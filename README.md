@@ -1,7 +1,7 @@
 Extension 2018 Wordpress Theme
 ===
 
-Extension 2018 Wordpress Theme was developed by Kenny Wilson using `underscores` as a base. It's a Wordpress version of the new 2018 Purdue Extension design.
+Extension 2018 Wordpress Theme was developed by [Kenny Wilson](https://github.com/purduekenny) using `underscores` as a base. It's a Wordpress version of the new 2018 Purdue Extension design.
 
 Getting Started
 ---------------
