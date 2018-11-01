@@ -72,7 +72,7 @@
           <div class="navbar-nav">
             <?php
               wp_nav_menu( array(
-                'theme_location'  => 'menu-1',
+                'theme_location'  => 'Primary',
                 'menu-id'         => 'primary-menu',
                 'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
                 'container'       => 'div',
